@@ -1,6 +1,16 @@
-# Nutshell: The Information Dashboard
+# Reactive Nutshell: The Information Dashboard
 
-Nutshell is a new product offering that you have been tasked with building. It's a dashboard for people to use to organize their daily tasks, events, news article, friends, and chat messages.
+## Setup: Follow these steps exactly
+
+1. Clone this repository
+1. `cd` into the directory it creates
+1. In the `api` directory, create a copy of the `database.json.example` and remove the .example extension.
+1. Run `npm install` and wait for all dependencies to be installed
+1. Run `npm start` to verify that installation was successful.
+
+## What is Reactive Nutshell?
+
+Nutshell is a new product offering that you have been tasked with building. It's an app for people to use to organize their daily tasks, events, news article, friends, and chat messages.
 
 You will be using the React library to build out this application.
 
@@ -51,16 +61,16 @@ To start you off, here's an example of what the resources in your API should loo
 
 ## How to Handle Authentication
 
-You will be using session storage to keep track of which user has logged into Nutshell. When the user fills out the registration form, you will POST their username and password to the `users` collection in your API. You will then immediately take the `id` of the object in the response and save it to session storage.
+You will be using local storage to keep track of which user has logged into Nutshell. When the user fills out the registration form, you will POST their username and password to the `users` collection in your API. You will then immediately take the `id` of the object in the response and save it to local storage.
 
 ```js
-sessionStorage.setItem("activeUser", user.id)
+localStorage.setItem("activeUser", user.id)
 ```
 
 If you add a Logout feature, all you will need to do is remove the session storage item.
 
 ```js
-sessionStorage.removeItem("activeUser")
+localStorage.removeItem("activeUser")
 ```
 
 ## Keep in mind some tips for a good usable app
